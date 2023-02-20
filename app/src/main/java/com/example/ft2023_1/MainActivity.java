@@ -10,8 +10,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView tvMain;
-    Button btnChangeMainText;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.tvMain = findViewById(R.id.tvMain);
-        this.btnChangeMainText = (Button) findViewById(R.id.btnChangeMainText);
-        btnChangeMainText.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                tvMain.setText("Text was changed!");
-            }
-        });
+    }
+
+    public void onBtnChangeMainTextClick(View view) {
+        this.tvMain.setText("Text was changed!");
     }
 }
